@@ -1,0 +1,7 @@
+<mat-toolbar class="color">
+<!--    <span>Моя шапка</span>-->
+<!--    <span class="spacer"></span>-->
+    <button mat-button *ngIf="!isLoggedIn" routerLink="/login">Log In</button>
+    <button mat-button *ngIf="isLoggedIn" (click)="logout()">Log Out</button>
+</mat-toolbar>
+

@@ -1,4 +1,4 @@
-<mat-card class="post-card">
+<mat-card class="post-card center">
     <mat-card-content>
         <div *ngIf="post">
             <h2>{{ post.title }}</h2>
@@ -8,6 +8,6 @@
 </mat-card>
 
 <mat-card-actions>
-    <button mat-raised-button color="primary" routerLink="/posts">Back to posts</button>
+    <button mat-raised-button color="primary" class="center" routerLink="/posts">Back to posts</button>
 </mat-card-actions>
 
