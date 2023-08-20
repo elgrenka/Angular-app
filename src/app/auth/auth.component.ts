@@ -19,7 +19,7 @@ export class AuthComponent {
     }
 
     login(): void {
-        const { username, password } = this.loginForm.value;
+        const {username, password} = this.loginForm.value;
         if (this.authService.login(username, password)) {
             // Редирект после успешной авторизации
             this.router.navigate(['/posts']);

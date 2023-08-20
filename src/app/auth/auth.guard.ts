@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {
     CanActivateChild,
     CanLoad,
@@ -9,14 +9,15 @@ import {
     UrlTree,
     Router,
 } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from './auth.service';
+import {Observable} from 'rxjs';
+import {AuthService} from './auth.service';
 
 @Injectable({
     providedIn: 'root',
 })
 export class AuthGuard implements CanActivateChild, CanLoad {
-    constructor(private authService: AuthService, private router: Router) {}
+    constructor(private authService: AuthService, private router: Router) {
+    }
 
     canActivateChild(
         childRoute: ActivatedRouteSnapshot,
@@ -37,7 +38,6 @@ export class AuthGuard implements CanActivateChild, CanLoad {
             return true;
         }
 
-        // Если пользователь не авторизован, перенаправляем на страницу логина
         return this.router.createUrlTree(['/login']);
     }
 }
